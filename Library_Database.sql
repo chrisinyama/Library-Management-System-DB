@@ -79,7 +79,7 @@ CREATE TABLE Repayments (
     RepaymentMethod nvarchar(30) NOT NULL,
     CONSTRAINT FK_Repayments_Members FOREIGN KEY (MemberID) REFERENCES Members(MemberID)
 );
--------------------------QUESTION 6-----------------------------
+
  --Query to Insert Addresses with Multiple Values into Addresses Table--
 
 INSERT INTO Addresses (Address_1, Address_2, City, Postcode)
@@ -194,7 +194,7 @@ VALUES
     (8, 9, '2022-04-05', 2.00, 'cash');
 
 
-								---QUESTION 2(A)--
+							
 
 /*This stored procedure takes a string parameter for the title and searches the "CatalogueItems" table for
 any records where the "Title" column contains the specified string as a substring. The results are then ordered by the "YearOfPublication" column in
@@ -214,7 +214,7 @@ END
 
 EXEC SearchCatalogueByTitle 'Breaking Bad: The Complete Series'
 
-									--QUESTION 2B--
+							
 
 /*This stored procedure, named "FivedaysOverdueItems", selects overdue items that are 5 days past their due date. 
 It joins the "CatalogueItems", "Loans", and "Members" tables to obtain the title of the item, 
@@ -234,7 +234,7 @@ EXEC FivedaysOverdueItems;
 
 
 
-                                          ---QUESTION 2C--
+                          
 
 /* This stored procedure, named "FivedaysOverdueItems", selects overdue items that are 5 days past their due date. 
 It joins the "CatalogueItems", "Loans", and "Members" tables to obtain the title of the item, the date it was taken out, 
@@ -301,7 +301,7 @@ EXEC UpdateMemberEmail @MemberID = 1, @NewEmail = 'Chisomeg@.com';
 
 SELECT * FROM Loans
 
-                       ---QUESTION 3--
+                    
 /*The library wants be able to view the loan history, showing all previous 
 and currentloans,and including details of the item borrowed, borrowed date,due date and anyassociated fines for each loan. 
 You should create a view containing all the requiredinformatio*/
@@ -342,7 +342,6 @@ SELECT * FROM LoanHistory
 
 
 
--------QUESTION 4---
 /*Query to Create a trigger so that the current status of an item automatically updates toAvailable when the book is returned*/
 
 /*This "UpdateStatustoavailable"  trigger for the "Loans" table updates the "CurrentStatus" 
@@ -376,7 +375,6 @@ END;
 
 
 
-  ---QUESTION 5--
 /*This code counts the number of loans taken out on January 15, 2023, at 5:00 PM, from the Loans table based 
 on the DateTakenOut column. The CONVERT function is used to convert the timestamp to a date-only value, and the COUNT function is used to count
 the rows that match the condition. The resulting column is given an alias of 'TotalLoans'.*/
@@ -387,7 +385,7 @@ WHERE CONVERT(date, DateTakenOut) = '2023-01-15 17:00:00';
 
 
 
---------QUESTION 7i---
+
 
 CREATE VIEW AvailableItems AS
 SELECT Title, Author, item_type, YearOfPublication, DateAddedToCollection, ISBN
@@ -421,7 +419,6 @@ END;
 
 SELECT dbo.CalculateOverdueFees(1, 5) AS 'Overdue Fees'
 
------------QUESTION 7iii--------
 /*  sub query that selects the first name and last name of a member 
 with MemberID = 1 and calculates their total overdue fines. The sub-query 
 uses the MemberID from the outer query to calculate the sum of overdue fines for that specific member.
@@ -434,7 +431,6 @@ SELECT m.FirstName, m.LastName,
 FROM Members m
 WHERE m.MemberID = 1;
 
-						------QUESTION 71V---
 
 /*This code creates a stored procedure called GetMemberAddresses, which takes an integer parameter called @MemberID. 
 The stored procedure retrieves member details and their addresses from two separate tables using the provided parameter. 
@@ -463,7 +459,7 @@ EXEC GetMemberAddresses @MemberID = 1;
 
 
 
-								-----QUESTION 7 V----
+								
 --A Trigger to ensure that the PasswordHash column i created  is hashed--
 
 /*This trigger will ensure that the "PasswordHash" column contains a hashed password by using 
