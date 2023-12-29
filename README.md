@@ -37,7 +37,7 @@ The database comprises several interconnected tables:
 - OverdueFines
 - Repayments
 
-An ER diagram or textual description showcasing the relationships and structure can be found [here](#link-to-diagram).
+An ER diagram or textual description showcasing the relationships and structure can be found [here]([#link-to-diagram](https://github.com/chrisinyama/Library-Management-System-DB/blob/main/Entity%20Relationship%20Diagram.png)).
 
 ## Usage
 
