@@ -1,4 +1,6 @@
 # Library-Management-System-DB
+![Library Management System](https://github.com/chrisinyama/Library-Management-System-DB/raw/main/Library.jpg)
+
 
 A comprehensive SQL database designed for managing library operations, including member details, item cataloging, loans, fines, and more.
 
